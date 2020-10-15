@@ -1,16 +1,16 @@
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import NoAlertPresentException
 import math
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from .locators import BasePageLocators
+from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoAlertPresentException
 
 class BasePage():
+	
 	def __init__(self, browser, url):
 		self.browser = browser
 		self.url = url
-		self.browser.implicitly_wait(5)
 
 	def go_to_login_page(self):
 		link = self.browser.find_element(*BasePageLocators.LOGIN_LINK)
@@ -64,5 +64,5 @@ class BasePage():
 			print("No second alert presented")
 
 	def should_be_authorized_user(self):
-		assert self.is_element_present(*BasePageLocators.USER_ICON), \
+		assert self.is_element_present(*BasePageLocators.USER_ICO), \
 			"User icon is not presented, probably unauthorized user"
