@@ -8,8 +8,8 @@ class BasePageLocators():
 	USER_ICON = (By.CSS_SELECTOR, ".icon-user")
 
 class LoginPageLocators():
-	LOGIN_SUBMIT = (By.CSS_SELECTOR, "[name='login_submit']")
-	REGISTRATION_SUBMIT = (By.CSS_SELECTOR, "[name='registration_submit']")
+	LOG_SUBMIT = (By.CSS_SELECTOR, "[name='login_submit']")
+	REG_SUBMIT = (By.CSS_SELECTOR, "[name='registration_submit']")
 	EMAIL = (By.CSS_SELECTOR, "#id_registration-email")
 	PASSWORD = (By.CSS_SELECTOR, "#id_registration-password1")
 	CONF_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
